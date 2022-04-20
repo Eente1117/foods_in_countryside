@@ -1,6 +1,6 @@
 <template lang="">
     <div id="loading_wrapper" v-if="isLoading">
-        <img id="loafing_indicator" src="/images/loading.gif">
+        <img id="loafing_indicator" src="../assets/images/loading.gif">
     </div>
     <div id="func_bar">
         <div id="region_filter">

@@ -1,13 +1,13 @@
 <template lang="">
     <div id="side_bar">
         <div class="ad_wrapper">
-            <img src="/images/adv1.png" />
+            <img src="../assets/images/adv1.png" />
         </div>
         <div class="ad_wrapper">
-            <img src="/images/adv2.png" />
+            <img src="../assets/images/adv2.png" />
         </div>
         <div class="ad_wrapper">
-            <img src="/images/adv3.png" />
+            <img src="../assets/images/adv3.png" />
         </div>
     </div>
 </template>
