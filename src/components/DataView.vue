@@ -701,18 +701,25 @@ export default {
     display: block;
     overflow: hidden;
     width: 100%;
-    margin-bottom: $spacing*2;
 
     #pagination_text {
+        display: none;
         float: left;
         margin-top: 7px;
         margin-right: $spacing*2;
+        
+        @media (min-width: 768px) {
+            display: block;
+        }
     }
 
     #pagination_inenr {
         display: block;
         overflow: hidden;
-        text-align: right;
+
+        @media (min-width: 768px) {
+            text-align: right;
+        }
 
         .page_btn {
             margin-bottom: $spacing/2;
