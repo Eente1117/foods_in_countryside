@@ -9,9 +9,10 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "tw-city-selector": "^2.1.1",
-    "vue": "^3.2.13",
-    "vuejs-paginate": "^2.1.0"
+    "reset-css": "^5.0.1",
+    "sass-loader": "^12.6.0",
+    "tw-city-selector": "^1.0.12",
+    "vue": "^3.2.13"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -22,8 +23,7 @@
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
     "node-sass": "^7.0.1",
-    "sass": "^1.50.0",
-    "sass-loader": "^12.6.0"
+    "sass": "^1.50.0"
   },
   "eslintConfig": {
     "root": true,

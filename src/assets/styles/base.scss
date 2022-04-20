@@ -1,0 +1,125 @@
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: #333;
+  }
+
+.section {
+    background-color: #EAEBED;
+
+    &#footer {
+        background-color: #8D8E8F;
+    }
+
+    .section_inner {
+        max-width: $max_width;
+        margin: 0 auto;
+        padding: 0 $spacing*2;
+    }
+}
+
+#container {
+
+    #content_wrapper {
+
+        @media (min-width: 1024px) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #content_main {
+            flex-basis: 0;
+            flex-grow: 999;
+            min-height: calc(100vh - 179px);
+            margin-bottom: $spacing*2;
+
+            @media (min-width: 1024px) {
+                margin-right: $spacing*2;
+            }
+        }
+    
+        #side_bar {
+            display: none;
+            flex-grow: 1;
+            flex-basis: 300px;
+            align-self: end;
+            position: sticky;
+            bottom: 0;
+    
+            @media (min-width: 1024px) {
+                display: block;
+            }
+        }
+    }
+}
+
+#page_title {
+    padding: $spacing*2 0 $spacing*4;
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+
+#footer {
+    padding: $spacing*2 0;
+    font-size: 20px;
+    color: #CCC;
+
+    #footer_company {
+        padding-bottom: $spacing/2;
+    }
+
+    #foter_source {
+        font-size: 14px;
+
+        #source_link {
+            text-decoration: none;
+            color: $white;
+        }
+    }
+}
+
+select, button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+
+    &:focus-visible {
+        outline: 0;
+    }
+}
+
+.list_wrapper, .card_wrapper {
+
+    &.has_url {
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+.region_wrapper {
+    margin-bottom: 10px;
+
+    .region_city {
+        display: inline-block;
+        padding: $spacing/2;
+        background-color: $blue;
+        color: $white;
+    }
+
+    .region_town {
+        display: inline-block;
+        margin-left: $spacing/2;
+        font-size: 18px;
+        line-height: 1;
+    }
+}

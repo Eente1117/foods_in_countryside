@@ -1,21 +1,31 @@
 <template>
   <div id="myApp">
-    <h1>{{ title }}</h1>
-    <div id="container">
-        <div id="content_main">
-            <func-bar :currentCity="currentCity" :currentTown="currentTown" :currentView="currentView"></func-bar>
-            <data-view :currentCity="currentCity" :currentTown="currentTown" :rawData="rawData"></data-view>
+    <div id="container" class="section">
+      <div id="container_inner" class="section_inner">
+        <h1 id="page_title">{{ title }}</h1>
+        <div id="content_wrapper">
+            <div id="content_main">
+                <data-view :regionData="regionData" :rawData="rawData"></data-view>
+            </div>
+            <side-bar></side-bar>
         </div>
-        <side-bar></side-bar>
+      </div>
     </div>
-    <div id="footer">
+    <div id="footer" class="section">
+      <div id="footer_inner" class="section_inner">
+        <p id="footer_company">CMoney 全耀財經資訊</p>
+        <div id="foter_source">
+          <span id="source_text">資料來源：</span>
+          <a id="source_link" href="https://data.gov.tw/" target="_blank">政府資料開放平臺</a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 import rawData from "/json/data.json";
-import FuncBar from "./FuncBar";
+import regionData from "/json/region.json";
 import DataView from "./DataView";
 import SideBar from "./SideBar";
 
@@ -23,27 +33,25 @@ export default {
   name: 'MyApp',
   props: {
     title: String,
-    currentCity: String,
-    currentTown: String,
-    currentView: String
+    currentView: String,
   },
   data() {
     return {
-        rawData: rawData
+        rawData: rawData,
+        regionData: regionData
     };
   },
   components: {
-    FuncBar,
     DataView,
     SideBar
   },
-  created() {
-    // console.log(this.rawData);
+  methods: {
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss">
+
 
 </style>
